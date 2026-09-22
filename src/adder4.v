@@ -13,7 +13,16 @@ module adder4(
 	      output [4:0] result);
    
 // add your code here -- you must use four instances of the full adder "fulladd", defined below
-   
+   	//MY CODE :D
+	wire cout0, cout1, cout2, cout; //3 internal wires
+		//LSB
+	fulladd fa0(a[0], b[0], cin, sum[0], cout0);
+	//add 1
+	fulladd fa0(a[1], b[1], cin, sum[1], cout1);
+	//add 2
+	fulladd fa0(a[2], b[2], cin, sum[2], cout2);
+	//add 3
+	fulladd fa0(a[3], b[3], cin, sum[3], cout);
 endmodule
 
 module fulladd(
