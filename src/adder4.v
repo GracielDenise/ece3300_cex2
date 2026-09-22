@@ -18,11 +18,11 @@ module adder4(
 		//LSB
 	fulladd fa0(a[0], b[0], cin, sum[0], cout0);
 	//add 1
-	fulladd fa0(a[1], b[1], cin, sum[1], cout1);
+	fulladd fa1(a[1], b[1], cout0, sum[1], cout1);
 	//add 2
-	fulladd fa0(a[2], b[2], cin, sum[2], cout2);
+	fulladd fa2(a[2], b[2], cout1, sum[2], cout2);
 	//add 3
-	fulladd fa0(a[3], b[3], cin, sum[3], cout);
+	fulladd fa3(a[3], b[3], cout2, sum[3], cout);
 endmodule
 
 module fulladd(
