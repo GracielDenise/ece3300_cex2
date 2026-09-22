@@ -14,15 +14,15 @@ module adder4(
    
 // add your code here -- you must use four instances of the full adder "fulladd", defined below
    	//MY CODE :D
-	wire cout0, cout1, cout2, cout; //3 internal wires
+	wire cout0, cout1, cout2; //3 internal wires
 		//LSB
-	fulladd fa0(a[0], b[0], cin, sum[0], cout0);
+	fulladd fa0(a[0], b[0], cin, result[0], cout0);
 	//add 1
-	fulladd fa1(a[1], b[1], cout0, sum[1], cout1);
+	fulladd fa1(a[1], b[1], cout0, result[1], cout1);
 	//add 2
-	fulladd fa2(a[2], b[2], cout1, sum[2], cout2);
+	fulladd fa2(a[2], b[2], cout1, result[2], cout2);
 	//add 3
-	fulladd fa3(a[3], b[3], cout2, sum[3], cout);
+	fulladd fa3(a[3], b[3], cout2, result[3], result[4]);
 endmodule
 
 module fulladd(
