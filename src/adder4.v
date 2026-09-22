@@ -16,7 +16,7 @@ module adder4(
    	//MY CODE :D
 	wire cout0, cout1, cout2; //3 internal wires
 		//LSB
-	fulladd fa0(a[0], b[0], cin, result[0], cout0);
+	fulladd fa0(a[0], b[0], 0, result[0], cout0);
 	//add 1
 	fulladd fa1(a[1], b[1], cout0, result[1], cout1);
 	//add 2
